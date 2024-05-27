@@ -265,7 +265,7 @@ namespace GradAwait.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "77c7e695-65c9-43da-9328-e966069bd65a", "admina@strator.comx", false, false, null, null, null, "AQAAAAIAAYagAAAAEC11ndxuI6ajOJLQeKqq5/Lcxb436ekOMnWfHHg6u9LXzFbqJxiyWnmhOOO21YKVNQ==", null, false, "8a28e8ae-15e7-494c-a19d-56051e058c49", false, "Administrator" });
+                values: new object[] { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "2f6608ca-26d5-4627-8c56-61afb0a6185b", "admina@strator.comx", false, false, null, null, null, "AQAAAAIAAYagAAAAEGl9I05nahQWjspKTuf9yZK00uTm9AvS4yclz92vVyHLKZsRDZlCRO6sQbxbboU9wg==", null, false, "421293e8-cda7-4e47-971d-1f17a663c0f2", false, "Administrator" });
 
             migrationBuilder.InsertData(
                 table: "MessageBoard",

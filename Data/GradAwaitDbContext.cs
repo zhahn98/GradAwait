@@ -9,6 +9,12 @@ public class GradAwaitDbContext : IdentityDbContext<IdentityUser>
     private readonly IConfiguration _configuration;
 
     public DbSet<UserProfile> UserProfiles { get; set; }
+    public DbSet<MessageBoard> MessageBoard { get; set; }
+    public DbSet<NewsLetter> NewsLetter { get; set; }
+    public DbSet<Projects> Project { get; set; }
+    public DbSet<Reactions> Reaction { get; set; }
+    public DbSet<ReactionType> ReactionType { get; set; }
+
 
     public GradAwaitDbContext(DbContextOptions<GradAwaitDbContext> context, IConfiguration config) : base(context)
     {
@@ -26,12 +32,15 @@ public class GradAwaitDbContext : IdentityDbContext<IdentityUser>
             NormalizedName = "admin"
         });
 
+        string adminPassword = _configuration["AdminPassword"] ??
+        "defaultPassword";
+
         modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser
         {
             Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
             UserName = "Administrator",
             Email = "admina@strator.comx",
-            PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, _configuration["AdminPassword"])
+            PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, adminPassword)
         });
 
         modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>

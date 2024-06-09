@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GradAwait.Migrations
 {
     [DbContext(typeof(GradAwaitDbContext))]
-    [Migration("20240527195520_InitialCreate")]
+    [Migration("20240527203511_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -368,13 +368,13 @@ namespace GradAwait.Migrations
                         {
                             Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "77c7e695-65c9-43da-9328-e966069bd65a",
+                            ConcurrencyStamp = "2f6608ca-26d5-4627-8c56-61afb0a6185b",
                             Email = "admina@strator.comx",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEC11ndxuI6ajOJLQeKqq5/Lcxb436ekOMnWfHHg6u9LXzFbqJxiyWnmhOOO21YKVNQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGl9I05nahQWjspKTuf9yZK00uTm9AvS4yclz92vVyHLKZsRDZlCRO6sQbxbboU9wg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8a28e8ae-15e7-494c-a19d-56051e058c49",
+                            SecurityStamp = "421293e8-cda7-4e47-971d-1f17a663c0f2",
                             TwoFactorEnabled = false,
                             UserName = "Administrator"
                         });

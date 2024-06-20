@@ -22,6 +22,11 @@ export const logout = () => {
 
 export const tryGetLoggedInUser = () => {
   return fetch(_apiUrl + "/me").then((res) => {
+
+    if (res.status === 500) {
+      return Promise.resolve(null)
+    }
+
     return res.status === 401 ? Promise.resolve(null) : res.json();
   });
 };

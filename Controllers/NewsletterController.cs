@@ -97,9 +97,15 @@ public class NewsletterController : ControllerBase
     NewsLetter? newsLetter = _dbContext.NewsLetter.FirstOrDefault((nl) => nl.Id == newsLetterId);
 
     // update the values
-    // if (newsletter != null)
-    // {
-    //     newsletter = editedReactionType.Type;
+    if (newsLetter != null)
+    {
+      newsLetter.UserId = editedNewsLetter.UserId;
+      newsLetter.Title = editedNewsLetter.Title;
+      newsLetter.Body = editedNewsLetter.Body;
+      newsLetter.Image = editedNewsLetter.Image;
+      newsLetter.Date = editedNewsLetter.Date;
+    }
+
     _dbContext.SaveChanges();
 
     return NoContent();
